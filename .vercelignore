@@ -1,0 +1,43 @@
+# ==============================================================================
+# Vercel Deployment Ignore File (.vercelignore)
+# Prevents uploading local virtual environments, test files, and secrets.
+# ==============================================================================
+
+# Environment files & Secrets
+.env
+.env.*
+*.env
+*.key
+*.pem
+*.cert
+
+# Python cache & virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# Test suites & caches (not needed in production bundle)
+tests/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE configurations
+.idea/
+.vscode/
+
+# Git & Vercel local cache
+.git/
+.vercel/
+
+# Logs
+*.log
+logs/
+
+# OS specific files
+.DS_Store
+Thumbs.db
+

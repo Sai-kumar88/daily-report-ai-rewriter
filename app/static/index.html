@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Report AI</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+  <!-- Minimal Header -->
+  <header>
+    <div class="header-container">
+      <div class="logo-text">
+        <h1>Daily Report AI</h1>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main>
+    <div class="single-card">
+      <!-- Status Notice -->
+      <div id="statusNotice" class="status-notice">
+        <span id="statusIcon"></span>
+        <span id="statusText"></span>
+        <button type="button" id="undoBtn" class="btn-undo" style="display:none;">Undo</button>
+      </div>
+
+      <!-- Single Sentence Area -->
+      <div class="textarea-wrapper">
+        <textarea
+          id="reportInput"
+          placeholder="Enter your daily report description here..."
+          spellcheck="true"
+        ></textarea>
+        <div class="textarea-footer">
+          <span class="hint">Press <strong>Ctrl + Enter</strong> to rewrite</span>
+          <span id="charCounter">0 / 2000</span>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="action-bar">
+        <div class="action-left">
+          <button type="button" id="rewriteBtn" class="btn btn-primary" disabled>
+            <div id="btnSpinner" class="spinner"></div>
+            <span id="btnText">Rewrite</span>
+          </button>
+          <button type="button" id="copyBtn" class="btn btn-secondary" style="display:none;">
+            Copy
+          </button>
+        </div>
+        <div class="action-right">
+          <button type="button" id="clearBtn" class="btn btn-text">
+            Clear
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
